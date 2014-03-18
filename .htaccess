@@ -1,0 +1,21 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule !\.(js|gif|jpg|png|css|ico|swf|jpeg)$ /appTest/index.php [NC,L]
+AddDefaultCharset utf8
+<Files "*.conf">
+Order deny,allow
+Deny from all
+</Files>
+<FilesMatch "\.(gif|jpg|jpeg|png|ico|swf|js|css|js.php|bmp)$">
+Header set Cache-Control "max-age=290304000, public"
+</FilesMatch>
+Header unset ETag
+FileETag None
+<FilesMatch "\.(swf|js|css|php|html|bmp)$">
+SetOutputFilter DEFLATE
+</FilesMatch>
+
+
