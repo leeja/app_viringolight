@@ -4,10 +4,13 @@
  * 
  * @package app example
  * @author @joseleerazuri
- * @copyright by JASoft Solutions 2012
+ * @copyright by JASoft Solutions 2014
  * @version 1.0
  * @access public
  */ 
+
+$messages['msgAppTitle'] = 'Mikhuna';
+$messages['msgAppDescription'] = 'Aplicación para realizar Deliverys y Reservar Mesas';
 
 # mensajes usados en la pagina de logeo
 $messages['msgAppVersion'] = 'Versión';
@@ -17,3 +20,4 @@ $messages['msgAppUser'] = 'Usuario';
 $messages['msgAppModule'] = 'Modulo';
 
 
+$messages['msgListPlaces'] = 'Lista de Lugares';
